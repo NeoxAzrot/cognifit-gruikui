@@ -20,6 +20,7 @@ window.onload = () => {
 *
 *	@copyright Copyright ©2020 - All rights reserved
 *
+* @design: Elise Echasseriau
 ***************************************************************************/
 
 // Déclaration des variables global
@@ -143,7 +144,8 @@ const restart = async () => {
 	$(".losing-screen").fadeOut()
 	setTimeout(function(){ $(".play-screen").fadeIn() }, 500)
 	await pause(1000)
-	showPath() // Permet de reprendre où on avait perdu
+	path = [] // Réinitialise le modèle
+	randomPath() // Reprends au même level avec une nouvelle séquence
 }
 
 // Fonction pour changer la couleur des images pour le prochain niveau
