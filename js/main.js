@@ -120,12 +120,18 @@ const checkPath = () => {
 const losingScreen = () => {
 	$(".play-screen").fadeOut()
 	setTimeout(function(){ $(".losing-screen").fadeIn() }, 500)
+	// Remet le message pour le prochain tour
+	setTimeout(function(){ $("#showPath").show() }, 500)
+	setTimeout(function(){ $("#userTurn").hide() }, 500)
 }
 
 // Fonction pour afficher l'écran si l'utilisateur gagne
 const winningScreen = () => {
 	$(".play-screen").fadeOut()
 	setTimeout(function(){ $(".winning-screen").fadeIn() }, 500)
+	// Remet le message pour le prochain tour
+	setTimeout(function(){ $("#showPath").show() }, 500)
+	setTimeout(function(){ $("#userTurn").hide() }, 500)
 }
 
 // Fonction pour aller au niveau suivant
