@@ -1,0 +1,399 @@
+/* Variables CSS */
+:root {
+  --blue-dark: #654FEF;
+  --blue-light: #05E4F7;
+  --blue-medium: #0F8294;
+  --white: #FEFEFE;
+}
+
+/* Importation des polices */
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../fonts/Montserrat-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Sans Forgetica";
+  src: url("../fonts/SansForgetica-Regular.otf") format("opentype");
+}
+
+/* Style des éléments récurrents */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.overlay {
+  background: #000000;
+  opacity: 0.4;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+#particles-js {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+button {
+  background-color: var(--white);
+  border: none;
+  color: var(--blue-medium);
+  padding: 0 48px;
+  text-decoration: none;
+  font-size: 55px;
+  font-family: 'Sans Forgetica', sans-serif;
+  border-radius: 36px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.4s ease;
+  box-shadow: 0 0 20px rgba(33, 33, 33, 1);
+}
+
+button:hover, button:focus {
+  box-shadow: 0 0 40px rgba(33, 33, 33, 1);
+}
+
+/* Style du menu démarrer */
+.start-menu h1 {
+  font-family: 'Montserrat-Light', sans-serif;
+  font-size: 160px;
+  color: var(--white);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.start-menu {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 50px);
+}
+
+.text-introduction {
+  text-align: center;
+  width: 60%;
+}
+
+.text-introduction p {
+  font-family: 'Montserrat-Light', sans-serif;
+  font-size: 30px;
+  color: var(--white);
+  margin: 0;
+}
+
+.text-introduction .question {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1022px) {
+  .text-introduction {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .text-introduction {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .container h1 {
+    font-size: 130px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .container h1 {
+    font-size: 60px;
+  }
+
+  .text-introduction {
+    width: 80%;
+  }
+
+  .text-introduction p {
+    font-size: 20px;
+  }
+
+  .text-introduction .question {
+    font-size: 25px;
+  }
+
+  button {
+    font-size: 32px;
+  }
+}
+
+/* Style du menu démarrer */
+.play-screen {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.play-screen h2 {
+  font-family: 'Montserrat-Light', sans-serif;
+  font-size: 60px;
+  color: var(--white);
+  text-align: center;
+  width: 50%;
+  margin-bottom: 0;
+}
+
+.play-screen .level {
+  font-family: 'Montserrat-Light', sans-serif;
+  font-size: 35px;
+  color: var(--white);
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  margin: 0;
+}
+
+.play-screen .gruikui {
+  height: 200px;
+  width: 200px;
+  margin-top: -50px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+
+.play-screen .gruikui.hover {
+  pointer-events: auto;
+}
+
+.play-screen .gruikui.hover:hover {
+  transform: scale(1.2);
+}
+
+.container-gruikui .row:nth-child(1) .gruikui {
+  margin-top: 0;
+}
+
+.container-gruikui {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 50%;
+}
+
+.container-gruikui .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-gruikui .row:nth-child(2) {
+  justify-content: space-between;
+}
+
+.container-gruikui .row:nth-child(2n+1) {
+  padding: 0 80px;
+}
+
+@media screen and (max-width: 1194px) {
+  .play-screen h2 {
+    width: 60%;
+  }
+
+  .container-gruikui .row:nth-child(2) {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .play-screen h2 {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .play-screen h2 {
+    font-size: 50px;
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .play-screen h2 {
+    width: 70%;
+    font-size: 40px;
+    margin-top: 90px;
+  }
+
+  .container-gruikui .row:nth-child(2) {
+    justify-content: space-around;
+  }
+
+  .play-screen .level {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .play-screen h2 {
+    font-size: 30px;
+  }
+
+  .container-gruikui {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .container-gruikui .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-gruikui .row:nth-child(2n+1) {
+    padding: 0;
+  }
+
+  .play-screen .gruikui {
+    height: 120px;
+    width: 120px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .play-screen h2 {
+    width: 80%;
+  }
+}
+
+/* Style du menu de victoire */
+.winning-screen {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.winning-screen h2 {
+  font-family: 'Montserrat-Light', sans-serif;
+  font-size: 60px;
+  color: var(--white);
+  text-align: center;
+  width: 50%;
+}
+
+.winning-screen .level {
+  font-family: 'Montserrat-Light', sans-serif;
+  font-size: 35px;
+  color: var(--white);
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  margin: 0;
+}
+
+@media screen and (max-width: 952px) {
+  .winning-screen h2 {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .winning-screen h2 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 646px) {
+  .winning-screen h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 516px) {
+  .winning-screen h2 {
+    width: 80%;
+  }
+}
+
+/* Style du menu de défaite */
+.losing-screen {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.losing-screen h2 {
+  font-family: 'Montserrat-Light', sans-serif;
+  font-size: 60px;
+  color: var(--white);
+  text-align: center;
+  width: 60%;
+}
+
+.losing-screen .level {
+  font-family: 'Montserrat-Light', sans-serif;
+  font-size: 35px;
+  color: var(--white);
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1160px) {
+  .losing-screen h2 {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 853px) {
+  .losing-screen h2 {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 747px) {
+  .losing-screen h2 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 622px) {
+  .losing-screen h2 {
+    font-size: 40px;
+  }
+}

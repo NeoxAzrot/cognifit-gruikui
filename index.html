@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>CogniFit - Gruikui</title>
+    <!-- Les meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0F8294"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0F8294">
+    <meta name="apple-mobile-web-app-title" content="CogniFit - Gruikui">
+    <!-- Les link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/logo/logo-152.png">
+    <!-- Les scripts -->
+    <!-- defer = execution du script après que le chargement du  document -->
+    <script src="js/jquery-3.5.1.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/Particles/particles.js" defer></script>
+    <script src="js/Particles/app.js" defer></script>
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="overlay"></div>
+      <div id="particles-js"></div>
+    </div>
+
+    <div class="container">
+      <div class="start-menu">
+        <h1>CogniFit</h1>
+        <button type="button" name="button" onclick="start()">Start</button>
+        <div class="text-introduction">
+          <p class="introduction">Entraine ta mémoire et ta réactivité avec ce jeu cognitif. Le but sera de mémoriser l’ordre d’affichage et de le reproduire.</p>
+          <p class="question">Es-tu prêt à te mettre au défi ? 🤙</p>
+        </div>
+      </div>
+
+      <div class="play-screen" style="display: none;">
+        <p class="level">LVL <span id="level-number">01</span></p>
+        <h2 id="showPath">Mémorise bien dans l’ordre les intrus 🧐</h2>
+        <h2 id="userTurn" style="display: none; width: 60%;">Maintenant, à toi de jouer 👊</h2>
+        <div class="container-gruikui">
+          <div class="row">
+            <img class="gruikui hover" src="images/gruikui-orange.png" alt="Gruikui">
+            <img class="gruikui hover" src="images/gruikui-orange.png" alt="Gruikui">
+          </div>
+          <div class="row">
+            <img class="gruikui hover" src="images/gruikui-orange.png" alt="Gruikui">
+            <img class="gruikui hover" src="images/gruikui-orange.png" alt="Gruikui">
+            <img class="gruikui hover" src="images/gruikui-orange.png" alt="Gruikui">
+          </div>
+          <div class="row">
+            <img class="gruikui hover" src="images/gruikui-orange.png" alt="Gruikui">
+            <img class="gruikui hover" src="images/gruikui-orange.png" alt="Gruikui">
+          </div>
+        </div>
+      </div>
+
+      <div class="winning-screen" style="display: none;">
+        <h2>Félicitations ! Tu as relevé le défi 🏆</h2>
+        <button type="button" name="button" onclick="nextLevel()">Next level</button>
+      </div>
+
+      <div class="losing-screen" style="display: none;">
+        <h2>Oups... Sois plus attentif la prochaine fois 🤷‍♂️</h2>
+        <button type="button" name="button" onclick="restart()">Start again</button>
+      </div>
+    </div>
+  </body>
+</html>
