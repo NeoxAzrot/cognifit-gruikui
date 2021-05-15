@@ -9,3 +9,7 @@ Here is the [link](https://neoxazrot.github.io/cognifit-gruikui/), good luck!
 ## Why Gruikui?
 
 Because it's my rubber ducky ! And it's by far my favorite Pokemon.
+
+---
+
+[Sami Lafrance](https://www.samilafrance.com/)
