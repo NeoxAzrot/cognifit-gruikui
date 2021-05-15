@@ -6,7 +6,7 @@ The aim of the game is simple. You just have to **repeat the order of the color 
 
 The difficulty of the game increases 1 by 1.
 
-Here is the [link](test), good luck!
+Here is the [link](https://neoxazrot.github.io/cognifit-gruikui/), good luck!
 
 ## Why Gruikui?
 
